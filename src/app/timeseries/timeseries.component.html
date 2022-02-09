@@ -1,0 +1,31 @@
+<div class = 'container'>
+  <div class = 'row'>
+    <div class = 'col-6'>
+      <div class = 'form-group'>
+        <select 
+            name="contactMethod" 
+            id="contactMethod" 
+            class="form-control box"
+            [(ngModel)]="marketSymbol">
+            <option *ngFor="let item of sharesArr" [value]="item">{{item }}</option>
+        </select>
+      </div>
+      <div><br></div>
+      <div>
+        <button class = 'box' (click) = "timeSeriesPlot()"> Display {{marketSymbol}} </button>
+      </div>
+    </div>
+    <div class = 'col-6'>
+      <plotly-plot [data]="data" [layout]="layout" *ngIf = "showGraph"></plotly-plot>
+      <div><br></div>
+      <div *ngIf = "!dataAvail" class = "text-warning">Please get new data; Check terms of License</div>
+      <div><br></div>
+      <div *ngIf = "!dataAvail">
+          <button class = 'box' (click) = "getAllData()"> Get Data from Alpha </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
