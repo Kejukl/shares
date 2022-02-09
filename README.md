@@ -1,6 +1,10 @@
 # Shares
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+
+## Description
+A template to call Alphavantage API and get time series data.  Data has been plotted using ploty.
+For this project you need to apply for an Alphavantage key and enter inside the code !!!
+This free API may have limitation upon number of queries per minutes.  To have unlimited query check their price package.
 
 ## Development server
 
